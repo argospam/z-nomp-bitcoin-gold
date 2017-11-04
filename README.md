@@ -46,7 +46,6 @@ Usage
 * [Node.js](http://nodejs.org/) v7+ (install and configure)
 ```
 sudo apt-get install nodejs
-sudo apt-get install npm
 ```
 * [Redis](http://redis.io/) key-value store v2.6+ (install and configure)
 ```
