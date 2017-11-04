@@ -43,8 +43,11 @@ Usage
 
 #### Requirements
 * Coin daemon(s) (find the coin's repo and build latest version from source)
-* [Node.js](http://nodejs.org/) v7+ ([follow these installation instructions](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager))
-* [Redis](http://redis.io/) key-value store v2.6+ ([follow these instructions](http://redis.io/topics/quickstart))
+* [Node.js](http://nodejs.org/) v7+ (install and configure)
+    sudo apt-get install nodejs
+    sudo apt-get install npm
+* [Redis](http://redis.io/) key-value store v2.6+ (install and configure)
+    sudo apt-get install redis-server
 
 ##### Seriously
 Those are legitimate requirements. If you use old versions of Node.js or Redis that may come with your system package manager then you will have problems. Follow the linked instructions to get the last stable versions.
