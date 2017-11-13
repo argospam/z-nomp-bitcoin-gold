@@ -1405,15 +1405,15 @@ function SetupForPool(logger, poolOptions, setupFinished){
     var getProperAddress = function(address){
 
         if (address.length < 25 || address.length > 34) {
-            return (poolOptions.invalidAddress || (poolOptions.testnet === true ? "n1nKYxXxND5ejxCeA38LQATDuCqnCG1E1y" : "GbmcUSDpqKfHLV4aiYbpLRZypLkANRfmu6"));
+            return (poolOptions.invalidAddress || (poolOptions.testnet === true ? "mnFF2VhDXX8pz2beKCh73K1jnwJ3Lkogyt" : "GTxDdgkG9HWS7KosytGEFGqLE4HWuyw6Y7"));
         }
 
         if (poolOptions.testnet === true && address[0] !== 'm' && address[0] !== 'n' && address[0] !== '2') {
-            return (poolOptions.invalidAddress || "n1nKYxXxND5ejxCeA38LQATDuCqnCG1E1y");
+            return (poolOptions.invalidAddress || "mnFF2VhDXX8pz2beKCh73K1jnwJ3Lkogyt");
         }
 
         if (poolOptions.testnet === false && address[0] !== 'G' && address[0] !== 'A') {
-            return (poolOptions.invalidAddress || "GbmcUSDpqKfHLV4aiYbpLRZypLkANRfmu6");
+            return (poolOptions.invalidAddress || "GTxDdgkG9HWS7KosytGEFGqLE4HWuyw6Y7");
         }
 
         return address;
