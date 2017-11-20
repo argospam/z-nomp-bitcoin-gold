@@ -90,6 +90,8 @@ cd z-nomp
 sudo apt-get install build-essential libsodium-dev npm
 sudo npm install n -g
 sudo n stable
+git clone https://github.com/poolgold/z-nomp-bitcoin-gold.git z-nomp-bitcoin-gold
+cd z-nomp-bitcoin-gold
 npm update
 npm install
 ```
