@@ -14,6 +14,7 @@
     "walletInterval": 5,
     
     "invalidAddress": "GMA3zjGD5Xhy88MnVabq2ESWciPkdKD4uQ",
+    "_comment_invalidAddress": "if miner address is invalid, send reward to this address",
     
     "rewardRecipients": {
         "GMA3zjGD5Xhy88MnVabq2ESWciPkdKD4uQ": 1.0
