@@ -2,19 +2,19 @@
     "enabled": false,
     "coin": "btg_testnet.json",
     
-    "address": "",
+    "address": "n1FJ3S8wg9iyVWt6EprGnyRN3QfXm3c25A",
     "_comment_address": "a transparent address to send coinbase rewards to and to transfer to zAddress.",
     
     "zAddress": "",
     "_comment_zAddress": "Not used",
     
-    "tAddress": "",
+    "tAddress": "mjFigiJFqE2NXQXwADjKRzUXt9kF16SMjX",
     "_comment_tAddress": "transparent address used to send payments, make this a different address, otherwise payments will not send",
     
     "walletInterval": 5,
     
     "rewardRecipients": {
-        "": 1.0
+        "mwQU4MM6XkgCPnXRtABmnbGKBofYTgB9MJ": 1.0
     },
     
     "tlsOptions": {
@@ -34,6 +34,7 @@
         "minimumPayment": 0.1,
         "maxBlocksPerPayment": 3,
         "daemon": {
+            "comment_host": "192.168.0.105", 
             "host": "127.0.0.1",
             "port": 8332,
             "user": "username",
@@ -57,6 +58,7 @@
     
     "daemons": [
                 {
+                "comment_host": "192.168.0.105",
                 "host": "127.0.0.1",
                 "port": 8332,
                 "user": "username",

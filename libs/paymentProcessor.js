@@ -735,7 +735,7 @@ function SetupForPool(logger, poolOptions, setupFinished){
                         }
                         var round = rounds[i];
                         // update confirmations for round
-                        round.confirmations = parseInt((tx.result.confirmations || 0));
+                        round.confirmations = parseInt(tx.result?(tx.result.confirmations || 0):0);
                         // look for transaction errors
                         if (tx.error && tx.error.code === -5){
                             logger.warning(logSystem, logComponent, 'Daemon reports invalid transaction: ' + round.txHash);
@@ -1153,10 +1153,10 @@ function SetupForPool(logger, poolOptions, setupFinished){
                     // WE ARE SENDING PAYMENT CMD TO DAEMON
                     
                     // perform the sendmany operation .. addressAccount
-                    var rpccallTracking = 'sendmany "" '+JSON.stringify(addressAmounts);
-                    //console.log(rpccallTracking);
+                    var rpccallTracking = 'sendmany "'+ poolOptions.accountLabel + '" '+JSON.stringify(addressAmounts);
+                    console.log(rpccallTracking);
 
-                    daemon.cmd('sendmany', ["", addressAmounts], function (result) {
+                    daemon.cmd('sendmany', [poolOptions.accountLabel, addressAmounts], function (result) {
                         // check for failed payments, there are many reasons
                         if (result.error && result.error.code === -6) {
                             // check if it is because we don't have enough funds
@@ -1405,14 +1405,14 @@ function SetupForPool(logger, poolOptions, setupFinished){
     var getProperAddress = function(address){
 
         if (address.length < 25 || address.length > 34) {
-            return (poolOptions.invalidAddress || (poolOptions.testnet === true ? "mnFF2VhDXX8pz2beKCh73K1jnwJ3Lkogyt" : "GTxDdgkG9HWS7KosytGEFGqLE4HWuyw6Y7"));
+            return (poolOptions.invalidAddress || (poolOptions.testnet === true ? "aavrs75aAxBX8VLQmujAc1h6ix5KUCkpVx" : "GTxDdgkG9HWS7KosytGEFGqLE4HWuyw6Y7"));
         }
 
-        if (poolOptions.testnet === true && address[0] !== 'm' && address[0] !== 'n' && address[0] !== '2') {
-            return (poolOptions.invalidAddress || "mnFF2VhDXX8pz2beKCh73K1jnwJ3Lkogyt");
+        if (poolOptions.testnet === true && address[0] !== 'a' && address[0] !== '2') {
+            return (poolOptions.invalidAddress || "aavrs75aAxBX8VLQmujAc1h6ix5KUCkpVx");
         }
 
-        if (poolOptions.testnet === false && address[0] !== 'G' && address[0] !== 'A') {
+        if (poolOptions.testnet === false && address[0] !== 'A' && address[0] !== '2') {
             return (poolOptions.invalidAddress || "GTxDdgkG9HWS7KosytGEFGqLE4HWuyw6Y7");
         }
 
