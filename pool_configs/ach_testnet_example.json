@@ -1,29 +1,30 @@
 {
     "enabled": false,
-    "coin": "btg_testnet.json",
-    
-    "address": "n1FJ3S8wg9iyVWt6EprGnyRN3QfXm3c25A",
-    "_comment_address": "a transparent address to send coinbase rewards to and to transfer to zAddress.",
-    
+    "coin": "ach_testnet.json",
+    "testnet": true,
+
+    "address": "a1FJ3S8wg9iyVWt6EprGnyRN3QfXm3c25A",
+    "_comment_address": "CHANGE THIS. Must label: znomp reward. a transparent address to send coinbase rewards to and to transfer to zAddress.",
+
     "zAddress": "",
     "_comment_zAddress": "Not used",
-    
-    "tAddress": "mjFigiJFqE2NXQXwADjKRzUXt9kF16SMjX",
-    "_comment_tAddress": "transparent address used to send payments, make this a different address, otherwise payments will not send",
-    
+
+    "tAddress": "ajFigiJFqE2NXQXwADjKRzUXt9kF16SMjX",
+    "_comment_tAddress": "CHANGE THIS. Must label: znomp reward. transparent address used to send payments, make this a different address, otherwise payments will not send",
+
     "walletInterval": 5,
-    
+
     "rewardRecipients": {
-        "mwQU4MM6XkgCPnXRtABmnbGKBofYTgB9MJ": 1.0
+        "awQU4MM6XkgCPnXRtABmnbGKBofYTgB9MJ": 1.0
     },
-    
+
     "tlsOptions": {
         "enabled": false,
         "serverKey":"",
         "serverCert":"",
         "ca":""
     },
-    
+
     "paymentProcessing": {
         "minConf": 10,
         "enabled": true,
@@ -34,14 +35,16 @@
         "minimumPayment": 0.1,
         "maxBlocksPerPayment": 3,
         "daemon": {
-            "comment_host": "192.168.0.105", 
+            "comment_host": "comment_host",
             "host": "127.0.0.1",
-            "port": 8332,
+            "port": 17332,
             "user": "username",
             "password": "password"
         }
     },
-    
+
+    "stratumHost": "testach.minelab.space",
+
     "ports": {
         "3857": {
             "tls":false,
@@ -55,24 +58,24 @@
             }
         }
     },
-    
+
     "daemons": [
                 {
-                "comment_host": "192.168.0.105",
+                "comment_host": "comment_host",
                 "host": "127.0.0.1",
-                "port": 8332,
+                "port": 17332,
                 "user": "username",
                 "password": "password"
                 }
                 ],
-    
+
     "p2p": {
         "enabled": false,
         "host": "127.0.0.1",
         "port": 19333,
         "disableTransactions": true
     },
-    
+
     "mposMode": {
         "enabled": false,
         "host": "127.0.0.1",
@@ -83,5 +86,5 @@
         "checkPassword": true,
         "autoCreateWorker": false
     }
-    
+
 }

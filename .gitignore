@@ -4,3 +4,5 @@ config.json
 #pool_configs/*.json
 !pool_configs/zclassic_example.json
 /nbproject/private/
+nbproject/project.properties
+nbproject/project.xml

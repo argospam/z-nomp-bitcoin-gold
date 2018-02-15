@@ -1,7 +1,6 @@
 {
-    "name": "Testcoin Gold",
-    "symbol": "TTG",
+    "name": "Testcoin ACH",
+    "symbol": "TCH",
     "algorithm": "equihash",
     "txfee": 0.000005
 }
-

@@ -25,10 +25,10 @@ module.exports = function(logger, poolConfig){
     var logSystem = 'Pool';
     var logComponent = coin;
     var logSubCat = 'Thread ' + (parseInt(forkId) + 1);
-    
+
     var lastRedisSync = 0;
     var redisCommands = [];
-    
+
     var connection = redis.createClient(redisConfig.port, redisConfig.host);
     if (redisConfig.password) {
         connection.auth(redisConfig.password);
@@ -101,7 +101,7 @@ module.exports = function(logger, poolConfig){
             var executionStart = Date.now();
             var executedOperations = redisCommands.length;
             connection.multi(redisCommands).exec(function(err, replies){
-                                                 console.log("Share processor Redis execution time: " + (Date.now() - executionStart).toString() + " Executed operations: " + executedOperations.toString());
+                                                 //console.log("Share processor Redis execution time: " + (Date.now() - executionStart).toString() + " Executed operations: " + executedOperations.toString());
                                                  if (err)
                                                  logger.error(logSystem, logComponent, logSubCat, 'Error with share processor multi ' + JSON.stringify(err));
                                                  });

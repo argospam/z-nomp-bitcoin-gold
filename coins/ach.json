@@ -1,7 +1,6 @@
 {
-    "name": "Bitcoin Gold",
-    "symbol": "BTG",
+    "name": "AchieveCoin",
+    "symbol": "ACH",
     "algorithm": "equihash",
     "txfee": 0.000005
 }
-
