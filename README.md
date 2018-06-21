@@ -85,8 +85,8 @@ Clone the repository and run `npm update` for all the dependencies to be install
 
 ```bash
 cd ~
-git clone https://github.com/argospan/z-nomp-bitcoin-gold.git z-nomp
-cd z-nomp
+git clone https://github.com/achievecoin/z-nomp-achievecoin.git z-nomp-achievecoin
+cd z-nomp-achievecoin
 sudo apt-get install build-essential libsodium-dev npm
 sudo npm install n -g
 sudo n stable
@@ -115,7 +115,7 @@ node [path to cli.js] [coin name in config] [block hash symbol]
 ```
 Example: inside `zclassic.conf` add the line
 ```
-blocknotify=node /home/user/z-nomp/scripts/cli.js blocknotify zclassic %s
+blocknotify=node /home/user/z-nomp-achievecoin/scripts/cli.js blocknotify zclassic %s
 ```
 
 Alternatively, you can use a more efficient block notify script written in pure C. Build and usage instructions
