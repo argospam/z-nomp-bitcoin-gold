@@ -85,7 +85,7 @@ Clone the repository and run `npm update` for all the dependencies to be install
 
 ```bash
 cd ~
-git clone https://github.com/argospan/z-nomp-bitcoin-gold.git z-nomp
+git clone https://github.com/achievecoin/z-nomp-achievecoin.git z-nomp
 cd z-nomp
 sudo apt-get install build-essential libsodium-dev npm
 sudo npm install n -g
