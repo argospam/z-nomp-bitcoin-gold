@@ -6,3 +6,6 @@ config.json
 /nbproject/private/
 nbproject/project.properties
 nbproject/project.xml
+/.vs/config/applicationhost.config
+/.vs/z-nomp-achievecoin/v15/.suo
+/.vs/slnx.sqlite
